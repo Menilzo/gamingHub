@@ -1,14 +1,48 @@
 body{
-    background: linear-gradient(#2b2b2b, #6d78d5);
+    background: linear-gradient(#2b2b2b, #3d4062);
     background-attachment: fixed;
 }
-.my-carousel {
-    margin-top: 100px;
+
+/*Icone maison*/
+.icon-gh {
+    background-image: url("../assets/images/ghIconBrand.png");
+    background-position: center center;
 }
 
-.my-category-display>figure>img {
-    max-height: 200px ;
-    max-width:100%;
+
+/*Navbar*/
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+}
+
+/*Carousel*/
+.my-carousel {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.carousel-inner>.carousel-item>img {
+    max-height: 800px;
+}
+
+/*Catégories*/
+.my-category-container>h2{
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: whitesmoke;
+}
+
+.category-link-container{
+    height: 0px
+}
+.category-link {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    z-index: 10;
 }
 
 .my-category-display{
@@ -30,11 +64,29 @@ body{
 
 .left-block>.flexbas {
     margin: 5px 5px 0px 0px;
+    width: 100%;
 }
 
 .right-block {
     margin: 10px 5px 0px 5px;
+    width: 100%;
 
+}
+
+.right-block>img{
+    width:100%;
+    height:100%;
+    transition: transform .3s;
+}
+
+.right-block{
+    overflow: hidden;
+}
+
+.right-block    > img:hover{
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03);
 }
 
 .bg-image{
@@ -43,27 +95,110 @@ body{
     background-repeat: no-repeat;
   }
 
-  .flexhaut > img {
-    max-width:100%;
+.flexhaut > img, .flexbas>img {
+    width:100%;
     height:100%;
     transition: transform .3s;
-  }
+}
 
-  .flexhaut{
+.flexhaut, .flexbas{
     overflow: hidden;
-  }
+}
 
-  .flexhaut> img:hover{
+.flexhaut> img:hover, .flexbas> img:hover{
     -ms-transform: scale(1.03); /* IE 9 */
     -webkit-transform: scale(1.03); /* Safari 3-8 */
     transform: scale(1.03);
 }
 
 
-@media screen and (min-width: 768px) {
+/*Cartes streamers*/
+.my-card-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.my-card-container>h2{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: whitesmoke;
+}
+
+/*BlockQuote*/
+.my-blockquote{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.my-blockquote>.blockquote {
+    color: grey;
+    font-size: 2em;
+}
+.my-blockquote>.blockquote-footer{
+    font-size:1.25em;
+}
+
+.behind-card>img{
+    position: relative;
+    top: 150px;
+
+    z-index: -1;
+    max-width: 100%;
+}
+
+/*Footer*/
+footer{
+    background-color: #2b2b2b;
+    padding: 30px 0px;
+}
+.footer-link{
+    color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 30px 0px 0px;
+}
+
+.footer-link>.nav-items>ul,.footer-link>.nav-items>ul>li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+footer>.social-email{
+    display: flex;
+}
+
+.social-ctn{
+    display: flex;
+    margin: auto;
+}
+
+.footer-icon{
+    color: rgb(138, 135, 135);
+    font-size: 25px;
+    padding: 30px;
+}
+
+.copyright-locale{
+    margin: 30px 0px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.copyright-list{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 30px 0 0px 0px;
+}
+
+/*MQ maison*/
+
+@media screen and (min-width: 769px) {
     .flexhaut{
         height: 250px;
-        max-width: 49.1%;
+        max-width: 49%;
 
     }
 
@@ -82,4 +217,28 @@ body{
     }
     
 }
+
+@media screen and (min-width: 992px) {
+    .flexhaut{
+        height: 250px;
+        max-width: 49.2%;
+
+    }
+
+    .flexbas{
+        height: 350px;
+    }
+
+    .left-block{
+        flex: 2;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .right-block{
+        flex: 1
+    }
+    
+}
+
 
