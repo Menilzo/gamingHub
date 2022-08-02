@@ -1,7 +1,85 @@
 body{
-    background: linear-gradient(#2b2b2b, #4e516c);
+    background: linear-gradient(#2b2b2b, #6d78d5);
     background-attachment: fixed;
 }
 .my-carousel {
     margin-top: 100px;
 }
+
+.my-category-display>figure>img {
+    max-height: 200px ;
+    max-width:100%;
+}
+
+.my-category-display{
+    display: flex;
+    flex-wrap: wrap;
+    width: 97%;
+    margin: auto;
+}
+
+
+.my-category-display>.left-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-block>.flexhaut  {
+    margin: 10px 5px 5px 0px;
+}
+
+.left-block>.flexbas {
+    margin: 5px 5px 0px 0px;
+}
+
+.right-block {
+    margin: 10px 5px 0px 5px;
+
+}
+
+.bg-image{
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .flexhaut > img {
+    max-width:100%;
+    height:100%;
+    transition: transform .3s;
+  }
+
+  .flexhaut{
+    overflow: hidden;
+  }
+
+  .flexhaut> img:hover{
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03);
+}
+
+
+@media screen and (min-width: 768px) {
+    .flexhaut{
+        height: 250px;
+        max-width: 49.1%;
+
+    }
+
+    .flexbas{
+        height: 350px;
+    }
+
+    .left-block{
+        flex: 2;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .right-block{
+        flex: 1
+    }
+    
+}
+
